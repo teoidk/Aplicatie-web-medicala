@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dr. Teo Panel | Acasa</title>
+  <title>Dr. Teo Panel | Preturi Cardiologie</title>
 
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -176,57 +176,82 @@
 
   <main id="main" class="main">
     <div class="titlu-pagina">
-      <h1>Acasa</h1>
+      <h1>Preturi cardiologie</h1>
+      <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#add-serv">Adauga serviciu</button>
     </div>
-    <section class="section">
+      <div class="modal fade" id="add-serv" tabindex="-1">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Adaugare serviciu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <form>
+                                <div class="modal-body">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Denumire">
+                                  </div>
+                                  <div class="form-group mt-3">
+                                    <input type="text" class="form-control" placeholder="Pret">
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-success">Adauga</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+    <section class="section mt-4">
       <div class="row">
         <div class="col-lg-12">
           <div class="row">
             <div class="col-12">
-              <div class="card">
+              <div class="card tabel overflow-auto">
                 <div class="card-body">
-                  <h5 class="card-title">Notificari</h5>
-                  <div class="alert alert-danger">Aveti 2 programari noi.</div>
-                  <div class="alert alert-info">Aveti 3 mesaje noi.</div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Programari</h5>
-                  <div id="lineChart"></div>
+                  <h5 class="card-title">Lista servicii</h5>
 
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  new ApexCharts(document.querySelector("#lineChart"), {
-                    series: [{
-                      name: "Programari",
-                      data: [10, 41, 35, 51, 49, 62, 69]
-                    }],
-                    chart: {
-                      height: 350,
-                      type: 'line',
-                      zoom: {
-                        enabled: false
-                      }
-                    },
-                    dataLabels: {
-                      enabled: false
-                    },
-                    stroke: {
-                      curve: 'straight'
-                    },
-                    grid: {
-                      row: {
-                        colors: ['#f3f3f3', 'transparent'],
-                        opacity: 0.5
-                      },
-                    },
-                    xaxis: {
-                      categories: ['Ianuarie', 'Februarie', 'Martie', 'Aprilie', 'Mai', 'Iunie', 'Iulie'],
-                    }
-                  }).render();
-                });
-              </script>
+                  <table class="table text-center table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">Denumire</th>
+                        <th scope="col">Pret</th>
+                        <th scope="col">Actiuni</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Consultatie Cardiologie</td>
+                        <td>200 Lei</td>
+                        <td><button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#edit-serv">Editeaza</button>&nbsp; <button class="btn btn-sm btn-danger">Elimina</button></td>
+                      </tr>
+                      <div class="modal fade" id="edit-serv" tabindex="-1">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Editare serviciu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <form>
+                                <div class="modal-body">
+                                  <div class="form-group">
+                                    <label>Denumire serviciu</label>
+                                    <input type="text" class="form-control" placeholder="Denumire" value="Consultatie Cardiologie">
+                                  </div>
+                                  <div class="form-group mt-3">
+                                    <label>Pret</label>
+                                    <input type="text" class="form-control" placeholder="Pret" value="200">
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-success">Salveaza</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -236,9 +261,8 @@
     </section>
 
   </main>
-
   <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="apexcharts/apexcharts.min.js"></script>
+
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dr. Teo Panel | Programari Cardiologie</title>
+  <title>Dr. Teo Panel | Programari Anghel Cristina</title>
 
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -13,7 +13,7 @@
   <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="simple-datatables/style.css" rel="stylesheet" type="text/css"></link>
-
+  
   <link href="css/index.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/meniu.css">
 </head>
@@ -177,7 +177,7 @@
 
   <main id="main" class="main">
     <div class="titlu-pagina">
-      <h1>Programari cardiologie</h1>
+      <h1>Programari Anghel Cristina</h1>
       <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#add-programare">Adauga programare</button>
     </div>
     <div class="modal fade" id="add-programare" tabindex="-1">
@@ -190,14 +190,6 @@
                               <form>
                                 <div class="modal-body">
                                   <div class="form-group mt-3">
-                                    <label>Nume</label>
-                                    <input type="text" class="form-control" placeholder="Nume">
-                                  </div>
-                                  <div class="form-group mt-3">
-                                    <label>Email</label>
-                                    <input type="email" class="form-control" placeholder="Email">
-                                  </div>
-                                  <div class="form-group mt-3">
                                     <label>Telefon</label>
                                     <input type="email" class="form-control" placeholder="Telefon">
                                   </div>
@@ -208,6 +200,17 @@
                                   <div class="form-group mt-3">
                                     <label>Ora</label>
                                     <input type="time" class="form-control" placeholder="Ora">
+                                  </div>
+                                  <div class="form-group mt-3">
+                                    <label>Departament</label>
+                                    <select name="departament" id="doctor" class="form-select">
+                                      <option value="">Cardiologie</option>
+                                      <option value="">Dermatologie</option>
+                                      <option value="">Endocrinologie</option>
+                                      <option value="">Neurologie</option>
+                                      <option value="">Ortopedie</option>
+                                      <option value="">Orl</option>
+                                    </select>
                                   </div>
                                   <div class="form-group mt-3">
                                     <label>Medic</label>
@@ -231,15 +234,14 @@
             <div class="col-12">
               <div class="card tabel overflow-auto">
                 <div class="card-body">
-                  <h5 class="card-title">Lista programari</h5>
+                  <h5 class="card-title">Lista programari (anghelcristina@gmail.com)</h5>
                   <table class="table text-center table-borderless datatable text-center">
                     <thead>
                       <tr>
-                        <th scope="col" class="text-center">Nume</th>
-                        <th scope="col" class="text-center">Email</th>
-                        <th scope="col" class="text-center" >Telefon</th>
+                        <th scope="col" class="text-center">Telefon</th>
                         <th scope="col" class="text-center">Data</th>
                         <th scope="col" class="text-center">Ora</th>
+                        <th scope="col" class="text-center">Departament</th>
                         <th scope="col" class="text-center">Medic</th>
                         <th scope="col" class="text-center">Status</th>
                         <th scope="col" class="text-center">Actiuni</th>
@@ -247,11 +249,10 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Anghel Cristina</td>
-                        <td>anghelcristina@gmail.com</td>
                         <td>0792786248</td>
                         <td>13.08.2022</td>
                         <td>14:30</td>
+                        <td>Cardiologie</td>
                         <td>Ionescu George</td>
                         <td><span class="badge bg-success">Confirmata</span></td>
                         <td><button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#edit-programare">Editeaza</button></td>
@@ -270,14 +271,6 @@
                                 </div>
                                 <div class="modal-body">
                                   <div class="form-group mt-3">
-                                    <label>Nume</label>
-                                    <input type="text" class="form-control" placeholder="Nume" value="Anghel Cristina" readonly>
-                                  </div>
-                                  <div class="form-group mt-3">
-                                    <label>Email</label>
-                                    <input type="email" class="form-control" placeholder="Email" value="anghelcristina@gmail.com" readonly>
-                                  </div>
-                                  <div class="form-group mt-3">
                                     <label>Telefon</label>
                                     <input type="email" class="form-control" placeholder="Telefon" value="0792786248">
                                   </div>
@@ -288,6 +281,17 @@
                                   <div class="form-group mt-3">
                                     <label>Ora</label>
                                     <input type="time" class="form-control" placeholder="Data" value="14:30">
+                                  </div>
+                                  <div class="form-group mt-3">
+                                    <label>Departament</label>
+                                    <select name="departament" id="doctor" class="form-select">
+                                      <option value="">Cardiologie</option>
+                                      <option value="">Dermatologie</option>
+                                      <option value="">Endocrinologie</option>
+                                      <option value="">Neurologie</option>
+                                      <option value="">Ortopedie</option>
+                                      <option value="">Orl</option>
+                                    </select>
                                   </div>
                                   <div class="form-group mt-3">
                                     <label>Medic</label>
