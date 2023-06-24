@@ -1,7 +1,7 @@
-// Exports the "wordcount" plugin for usage with module loaders
+// Exports the "default" icons for usage with module loaders
 // Usage:
 //   CommonJS:
-//     require('tinymce/plugins/wordcount')
+//     require('tinymce/icons/default')
 //   ES2015:
-//     import 'tinymce/plugins/wordcount'
-require('./plugin.js');
+//     import 'tinymce/icons/default'
+require('./icons.js');
